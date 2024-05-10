@@ -1,0 +1,18 @@
+// LAYOUT
+._main-layout {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+._main {
+  flex: 1 1 auto;
+}
+
+// CONTAINERS
+._container {
+  max-width: 123rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}

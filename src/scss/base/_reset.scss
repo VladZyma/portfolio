@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100svh;
+  font-size: 62.5%;
+}
+
+body {
+  height: 100svh;
+  font-size: 1.8rem;
+  @extend %DMSans-400;
+  color: $color-text;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+  vertical-align: top;
+  font-style: italic;
+}
+
+a[class] {
+  text-decoration: none;
+}

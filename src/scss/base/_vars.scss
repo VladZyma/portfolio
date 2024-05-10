@@ -1,0 +1,35 @@
+$color-text: #ffffff;
+$color-bg: #0b2447;
+$color-bg-dark: #0c0c0c;
+$color-bg-light: #19376d;
+$color-accent: #5c62ec;
+
+%DMSans-400 {
+  font-family: 'DMSans-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%DMSans-500 {
+  font-family: 'DMSans-Medium', sans-serif;
+  font-weight: 500;
+}
+
+%DMSans-700 {
+  font-family: 'DMSans-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%Poppins-400 {
+  font-family: 'Poppins-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%Poppins-500 {
+  font-family: 'Poppins-Medium', sans-serif;
+  font-weight: 500;
+}
+
+%Poppins-700 {
+  font-family: 'Poppins-Bold';
+  font-weight: 700;
+}

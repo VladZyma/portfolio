@@ -1,0 +1,8 @@
+@import './base/vars';
+@import './base/reset';
+@import './base/mixins';
+@import './base/fonts';
+@import './base/global';
+
+@import './components/*.scss';
+@import './pages/*.scss';
