@@ -1,4 +1,4 @@
-const { src, dest, watch } = require('gulp');
+const { src, dest, series, watch } = require('gulp');
 const { srcFolder, buildFolder } = require('./configs');
 
 // FILES
@@ -146,7 +146,7 @@ function img() {
     .pipe(dest(`./${buildFolder}/images`));
 }
 
-function svg() {
+function svgSymbol() {
   return src(`./${srcFolder}/images/**/*.svg`)
     .pipe(changed(`./${buildFolder}/images/**/*.svg`))
     .pipe(
@@ -169,6 +169,30 @@ function svg() {
                     },
                   },
                 ],
+              },
+            },
+          ],
+        },
+      })
+    )
+    .pipe(dest(`./${buildFolder}/images/svgsprite`));
+}
+
+function svgStack() {
+  return src(`./${srcFolder}/images/**/*.svg`)
+    .pipe(changed(`./${buildFolder}/images/**/*.svg`))
+    .pipe(
+      svgsprite({
+        mode: {
+          stack: {
+            example: true,
+          },
+        },
+        shape: {
+          transform: [
+            {
+              svgo: {
+                js2svg: { indent: 4, pretty: true },
               },
             },
           ],
@@ -207,7 +231,7 @@ function watching() {
     [`./${srcFolder}/images/**/*.*`, `!./${srcFolder}/images/**/*.svg`],
     img
   );
-  watch([`./${srcFolder}/images/**/*.svg`], svg);
+  watch([`./${srcFolder}/images/**/*.svg`], series(svgSymbol, svgStack));
   watch([`./${srcFolder}/fonts/*.*`], fonts);
 }
 
@@ -226,7 +250,8 @@ module.exports = {
   styles,
   scripts,
   img,
-  svg,
+  svgSymbol,
+  svgStack,
   fonts,
   files,
   videos,

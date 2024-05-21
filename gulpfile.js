@@ -9,7 +9,8 @@ exports.dev = series(
     gulpDev.styles,
     gulpDev.scripts,
     gulpDev.img,
-    gulpDev.svg,
+    gulpDev.svgSymbol,
+    gulpDev.svgStack,
     gulpDev.fonts,
     gulpDev.files,
     gulpDev.videos
@@ -25,7 +26,8 @@ exports.prod = series(
     gulpProd.styles,
     gulpProd.scripts,
     gulpProd.img,
-    gulpProd.svg,
+    gulpProd.svgSymbol,
+    gulpProd.svgStack,
     gulpProd.fonts,
     gulpProd.files,
     gulpProd.videos
