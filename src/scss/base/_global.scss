@@ -28,6 +28,7 @@
   @extend %DMSans-700;
   line-height: 130%;
   text-transform: uppercase;
+  letter-spacing: 2px;
   color: $color-accent;
 
   @media (max-width: 1126px) {
