@@ -1,0 +1,95 @@
+.skills {
+  padding: 10rem 0 10rem;
+
+  @media (max-width: 1126px) {
+    padding: 8rem 0 8rem;
+  }
+
+  &__title {
+    margin-bottom: 3rem;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 991px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    flex: 0 1 66rem;
+
+    @media (max-width: 1126px) {
+      max-width: 60rem;
+    }
+  }
+
+  &__img-box {
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+  }
+
+  &__img-element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+
+  &__items {
+    width: 100%;
+    flex: 0 1 49rem;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: 3rem;
+
+    @media (max-width: 480px) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    max-width: 12rem;
+
+    text-align: center;
+  }
+
+  &__item-box {
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+    margin-bottom: 1.6rem;
+
+    border-radius: 50%;
+    background-color: $color-bg-light;
+  }
+
+  &__item-img {
+    width: 62.5%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__item-name {
+    font-size: 1.8rem;
+    @extend %DMSans-700;
+    color: $color-text;
+
+    @media (max-width: 1126px) {
+      font-size: 1.6rem;
+    }
+  }
+}
