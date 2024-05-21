@@ -1,0 +1,156 @@
+.projects {
+  padding: 10rem 0 10rem;
+  min-height: 100svh;
+
+  &__title {
+    margin-bottom: 3rem;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+
+    @media (max-width: 1126px) {
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+    }
+
+    @media (max-width: 767px) {
+      grid-template-columns: unset;
+    }
+  }
+}
+
+.project {
+  width: 100%;
+  max-width: 36rem;
+  padding: 1.6rem 2rem 3rem;
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 1rem;
+  background: linear-gradient(to bottom, #576cbc, #132a53);
+
+  &__img-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2.6rem;
+    padding-top: 60%;
+
+    border-radius: 1rem;
+    overflow: hidden;
+
+    @media (max-width: 480px) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__descr {
+    margin-bottom: 3.2rem;
+    flex: 1 1 auto;
+  }
+
+  &__title {
+    margin-bottom: 2.6rem;
+
+    font-size: 3.2rem;
+    @extend %Poppins-700;
+
+    @media (max-width: 480px) {
+      margin-bottom: 2rem;
+      font-size: 2.8rem;
+    }
+  }
+
+  &__text {
+    @media (max-width: 480px) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__skills {
+    margin-bottom: 4rem;
+    flex: 1 1 auto;
+  }
+
+  &__skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+  }
+
+  &__skills-item {
+    position: relative;
+    width: 3.6rem;
+    height: 3.6rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    background-color: $color-bg;
+
+    &:hover {
+      cursor: help;
+    }
+
+    img {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      flex: 0 1 12.6rem;
+      min-height: 3.4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border-radius: 0.6rem;
+      background-color: $color-accent;
+      color: $color-text;
+      transition: background-color 0.3s ease;
+    }
+
+    &:hover,
+    &:active {
+      background-color: #4348e7;
+    }
+
+    img {
+      width: 2rem;
+      height: 2rem;
+      margin-right: 2rem;
+    }
+
+    .github-icon {
+      width: 3rem;
+      height: 3rem;
+      margin-right: 1.6rem;
+    }
+  }
+}
