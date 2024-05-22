@@ -6,6 +6,8 @@ const headerBoxEl = document.querySelector('.header__box');
 const headerBoxHeight = headerBoxEl.getBoundingClientRect().height;
 const sectionHero = document.querySelector('.hero');
 
+const allSections = document.querySelectorAll('.section');
+
 // MOBILE NAV
 mobileNavBtnEl.addEventListener('click', function (e) {
   e.stopPropagation();
@@ -52,4 +54,25 @@ navListEl.addEventListener('click', function (e) {
     const id = e.target.getAttribute('href');
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
   }
+});
+
+// REVEAL SECTIONS
+function revealSection(entries, observer) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove('section--hidden');
+
+  observer.unobserve(entry.target);
+}
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.5,
+});
+
+allSections.forEach((section) => {
+  sectionObserver.observe(section);
+  section.classList.add('section--hidden');
 });
