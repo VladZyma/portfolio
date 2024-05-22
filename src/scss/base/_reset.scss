@@ -19,6 +19,15 @@ body {
   color: $color-text;
 }
 
+body::-webkit-scrollbar {
+  width: 0.7em;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: $color-accent;
+}
+
 body,
 h1,
 h2,
