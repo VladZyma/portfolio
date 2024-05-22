@@ -1,0 +1,92 @@
+.footer {
+  padding: 10rem 0;
+  background-color: $color-bg-light;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  &__content-title {
+    margin-bottom: 1rem;
+
+    font-size: 8rem;
+    @extend %DMSans-700;
+    color: $color-text;
+
+    @media (max-width: 480px) {
+      font-size: 5rem;
+    }
+  }
+
+  &__contact-text {
+    font-size: 4rem;
+    @extend %Poppins-500;
+    color: $color-text;
+
+    @media (max-width: 480px) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__contacts-item {
+    position: relative;
+    padding-left: 7.5rem;
+
+    @media (max-width: 480px) {
+      padding-left: 5.2rem;
+    }
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 4rem;
+      height: 4rem;
+
+      @media (max-width: 480px) {
+        width: 3.6rem;
+        height: 3.6rem;
+      }
+    }
+  }
+
+  &__contacts-item--email::before {
+    content: url('../images/svgsprite/stack/svg/sprite.stack.svg#icons--mail');
+  }
+
+  &__contacts-item--linkedin::before {
+    content: url('../images/svgsprite/stack/svg/sprite.stack.svg#icons--linkedin');
+  }
+
+  &__contacts-item--phone::before {
+    content: url('../images/svgsprite/stack/svg/sprite.stack.svg#icons--phone');
+  }
+
+  &__contacts-link {
+    &:link,
+    &:visited {
+      font-size: 3rem;
+      color: $color-text;
+
+      @media (max-width: 480px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    &:hover,
+    &:active {
+      color: $color-text;
+    }
+  }
+}
