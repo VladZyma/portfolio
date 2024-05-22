@@ -24,6 +24,14 @@
   padding: 0 1.5rem;
 }
 
+// REVEAL SECTION
+.section {
+  transition: all 1s ease;
+}
+
+.section--hidden {
+  opacity: 0;
+}
 // TITLES
 .section-title {
   position: relative;
