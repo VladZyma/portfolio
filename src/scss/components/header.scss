@@ -109,6 +109,10 @@
   background-color: transparent;
   cursor: pointer;
 
+  @media (max-width: 991px) {
+    display: block;
+  }
+
   span {
     display: block;
     width: 100%;
@@ -148,8 +152,6 @@
   }
 
   &.mobile-nav-btn--active {
-    display: block;
-
     span {
       background-color: transparent;
     }
