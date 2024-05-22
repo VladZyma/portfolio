@@ -38,3 +38,18 @@ const headerObserver = new IntersectionObserver(
 );
 
 headerObserver.observe(sectionHero);
+
+// PAGE NAVIGATION
+navListEl.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  if (e.target.classList.contains('nav__link')) {
+    // for mobile nav
+    mobileNavBtnEl.classList.remove('mobile-nav-btn--active');
+    navListEl.classList.remove('nav__list--mobile');
+    document.body.classList.remove('_no-scroll');
+
+    const id = e.target.getAttribute('href');
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+  }
+});
