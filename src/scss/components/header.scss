@@ -22,9 +22,8 @@
 
     @media (max-width: 991px) {
       position: absolute;
-      bottom: 0;
-      right: 0;
       bottom: -270%;
+      right: 0;
       z-index: 999;
       overflow: hidden;
 
@@ -40,7 +39,7 @@
         rgba(25, 55, 109, 0.2) 20%,
         rgba(25, 55, 109, 1) 100%
       );
-      transition: width 1s ease;
+      transition: all 1s ease;
 
       &.nav__list--mobile {
         bottom: -270%;
