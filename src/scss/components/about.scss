@@ -11,6 +11,10 @@
 
     border-radius: 15px;
     background-color: rgba(12, 12, 12, 60%);
+
+    @media (max-width: 767px) {
+      padding: 10rem 2rem;
+    }
   }
 
   &__title {
