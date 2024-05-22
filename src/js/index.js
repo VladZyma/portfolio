@@ -1,6 +1,7 @@
 'use strict';
 const mobileNavBtnEl = document.querySelector('.mobile-nav-btn');
 const navListEl = document.querySelector('.nav__list');
+const logoLinkEl = document.querySelector('.nav__logo');
 
 const headerBoxEl = document.querySelector('.header__box');
 const headerBoxHeight = headerBoxEl.getBoundingClientRect().height;
@@ -42,6 +43,25 @@ const headerObserver = new IntersectionObserver(
 headerObserver.observe(sectionHero);
 
 // PAGE NAVIGATION
+logoLinkEl.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  const target = e.target.parentElement.classList.contains('nav__logo')
+    ? e.target.parentElement
+    : e.target;
+
+  if (target.classList.contains('nav__logo')) {
+    const id = target.getAttribute('href');
+
+    // for mobile nav
+    mobileNavBtnEl.classList.remove('mobile-nav-btn--active');
+    navListEl.classList.remove('nav__list--mobile');
+    document.body.classList.remove('_no-scroll');
+
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+  }
+});
+
 navListEl.addEventListener('click', function (e) {
   e.preventDefault();
 
