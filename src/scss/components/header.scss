@@ -3,6 +3,23 @@
   min-height: 8rem;
   padding: 1rem 0;
 
+  &__box {
+    width: 100%;
+    min-height: 8rem;
+    transition: all 1s ease;
+
+    &.header__box--sticky {
+      padding: 1rem 0;
+
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 999;
+
+      background-color: rgba(26, 74, 143, 0.8);
+    }
+  }
+
   &__nav {
     min-height: 8rem;
   }
@@ -42,7 +59,7 @@
       transition: all 1s ease;
 
       &.nav__list--mobile {
-        bottom: -270%;
+        bottom: -298%;
 
         width: 100%;
         max-width: 20rem;
