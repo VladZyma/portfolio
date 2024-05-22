@@ -12,6 +12,11 @@
   flex: 1 1 auto;
 }
 
+// NO PAGE SCROLL
+._no-scroll {
+  overflow-y: hidden;
+}
+
 // CONTAINERS
 ._container {
   max-width: 123rem;
