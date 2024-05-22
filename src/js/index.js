@@ -8,4 +8,5 @@ mobileNavBtnEl.addEventListener('click', function (e) {
 
   this.classList.toggle('mobile-nav-btn--active');
   navListEl.classList.toggle('nav__list--mobile');
+  document.body.classList.toggle('_no-scroll');
 });
